@@ -1,0 +1,22 @@
+{
+  "name": "music",
+  "description": "bower",
+  "main": "libs",
+  "authors": [
+    "lailai <739156890@qq.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "bower"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,175 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+header,.left,.right{
+  position: absolute;
+}
+header{
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  height: 150px;
+  /*border: solid #ffffff 1px;*/
+}
+header h1{
+  font-size: 40px;
+  height: 60px;
+  line-height: 60px;
+}
+header p{
+  line-height: 20px;
+  display: block;
+}
+header span{
+  padding-bottom: 10px;
+  text-align: center;
+}
+header .type{
+  display: inline-block;
+  margin:  0 auto;
+  list-style-type: none;
+}
+header .type li{
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  border-top: solid 1px #fff;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #ffffff;
+  cursor: pointer;
+}
+header .type li.selected{
+  background: #ffffff;
+  color: #000;
+}
+header .type li:first-child{
+  border-left: solid 1px #ffffff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+header .type li:last-child{
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#volume{
+  margin-top: 10px;
+}
+.left{
+  left: 10px;
+  top: 170px;
+  bottom: 10px;
+  width: 15%;
+  border: solid #ffffff 1px;
+}
+.left ul{
+  overflow: auto;
+}
+.left ul li{
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+ /* 超出部分变为省略号*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.left ul li.selected{
+  color: green;
+}
+.right{
+  top: 170px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+
+ /* left: 220px;
+  border: solid #ffffff 1px;*/
+ /* left: calc(15% + 5%);
+  left: -webkit-calc(15% + 5%);*/
+  /*left: calc(15% + 20px);
+  left: -webkit-calc(15% + 20px);*/
+}
+a {
+  color: #00B7FF;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;/*//取消默认样式*/
+  height: 8px;
+  background: #999;
+  border-radius: 10px;
+  outline: none;
+}
+/*滑块样式*/
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #ffffff;
+}
+/*火狐浏览器写法*/
+input[type="range"]::-moz-range-track{
+  -webkit-appearance: none;
+  height: 8px;
+  background: #999999;
+  border-radius: 10px;
+  outline: none;
+}
+input[type="range"]::-moz-range-thumb{
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #ffffff;
+  border: none;
+}
+/*超过一定高度或者宽度的时候变化样式*/
+@media screen and (max-width: 800px),screen and (max-height: 500px){
+  body{
+    font-size: 12px;
+  }
+  header{
+    height: 80px;
+  }
+  header h1{
+    font-size: 24px;
+    height: 34px;
+    line-height: 34px;
+  }
+  header .type li{
+    height: 16px;
+    line-height: 16px;
+    width: 50px;
+  }
+  .left,.right{
+    top: 100px;
+  }
+}
+.music-add{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: solid 2px #fff;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+  color: #ffffff;
+}
+.upload{
+  display: none;
+}
+.play{
+  display: none;
+}
